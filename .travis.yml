@@ -1,0 +1,16 @@
+language: ruby
+script:
+  - bundle exec rspec
+  - bundle exec rubocop --config .rubocop.yml
+service:
+  - postgresql
+postgres:
+  adapter: postgresql
+  database: postgresql
+  username: postgres
+before_script:
+  - cp config/database.yml.travis config/database.yml
+  - "psql -c 'create database gemcounter_test;' -U postgres"
+  - "bundle exec rake db:migrate"
+rvm:
+  - 2.4.3
