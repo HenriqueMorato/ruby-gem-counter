@@ -1,0 +1,21 @@
+version: '3'
+services:
+  db:
+    image: postgres:9.6-alpine
+    ports:
+      - 0:5432
+    env_file:
+      .env.docker
+    volumes:
+      - .:/gemcounterdb
+  web:
+    build: .
+    volumes:
+      - .:/gemcounter
+    ports:
+      - 80:3000
+    command: rails s -b 0.0.0.0
+    env_file:
+      .env.docker
+    links:
+      - db
