@@ -9,6 +9,8 @@ git_source(:github) do |repo_name|
 end
 
 gem 'coffee-rails', '~> 4.2'
+gem 'faraday'
+gem 'faraday_middleware'
 gem 'jbuilder', '~> 2.5'
 gem 'pg'
 gem 'puma', '~> 3.7'
@@ -18,10 +20,13 @@ gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
+  gem 'database_cleaner'
   gem 'factory_bot_rails'
   gem 'pry-byebug'
   gem 'rspec-rails'
   gem 'rubocop'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
