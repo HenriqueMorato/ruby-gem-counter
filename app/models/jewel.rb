@@ -1,0 +1,2 @@
+class Jewel < ApplicationRecord
+end

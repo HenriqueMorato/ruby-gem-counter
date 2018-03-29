@@ -15,4 +15,4 @@ before_script:
   - "bundle exec rake db:migrate"
   - "gem install bundler-audit"
 rvm:
-  - 2.4.3
+  - 2.4.1

@@ -23,4 +23,7 @@
 .byebug_history
 
 coverage/
+
 .env.docker
+
+/spec/examples.txt
