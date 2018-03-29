@@ -1,0 +1,21 @@
+Documentation:
+  Enabled: false
+Rails:
+  Enabled: true
+Style/FrozenStringLiteralComment:
+  Enabled: false
+AllCops:
+  TargetRubyVersion: 2.4
+  Include:
+    - '**/Rakefile'
+    - '**/Gemfile'
+    - '**/config.ru'
+  Exclude:
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'spec/rails_helper.rb'
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context', 'feature', 'scenario', 'let', 'namespace']
