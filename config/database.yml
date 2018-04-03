@@ -6,18 +6,14 @@ default: &default
   password: <%= ENV['DB_PASSWORD'] %>
   host: <%= ENV.fetch('DB_HOST') %>
 
-staging:
-  <<: *default
-  database: gemcounter_production
-
 development:
   <<: *default
-  database: gemcounter_development
+  database: gem_counter_development
 
 test:
   <<: *default
-  database: gemcounter_test
+  database: gem_counter_test
 
 production:
   <<: *default
-  database: gemcounter_production
+  database: gem_counter_production

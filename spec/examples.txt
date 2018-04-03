@@ -1,5 +1,0 @@
-example_id                                   | status  | run_time        |
--------------------------------------------- | ------- | --------------- |
-./spec/models/github_repository_spec.rb[1:1] | pending | 0.00001 seconds |
-./spec/services/github_service_spec.rb[1:1]  | passed  | 0.1249 seconds  |
-./spec/services/github_service_spec.rb[1:2]  | passed  | 0.03283 seconds |
