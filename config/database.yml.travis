@@ -4,20 +4,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: <%= ENV.fetch('DB_USERNAME') %>
   password: <%= ENV['DB_PASSWORD'] %>
-  host: <%= ENV.fetch('DB_HOST') %>
-
-staging:
-  <<: *default
-  database: gemcounter_production
-
-development:
-  <<: *default
-  database: gemcounter_development
 
 test:
   <<: *default
   database: gemcounter_test
-
-production:
-  <<: *default
-  database: gemcounter_production
