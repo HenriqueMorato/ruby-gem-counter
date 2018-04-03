@@ -1,7 +1,7 @@
 class GemfileReader
   attr_reader :gemfile_text
 
-  REGEX_PATTERN = /^ *gem '[a-z-_0-9]*'/m
+  REGEX_PATTERN = /^ *gem (?:'|")([a-z-0-9_]*)(?:'|")/m
 
   def initialize(gemfile_text)
     @gemfile_text = gemfile_text
@@ -9,7 +9,7 @@ class GemfileReader
 
   def execute
     gems_text = gemfile_text.scan REGEX_PATTERN
-    gems_text.map! { |text| text.scan(/'(.*)'/).first }.flatten!
+    gems_text.flatten!
     transform(gems_text)
   end
 
