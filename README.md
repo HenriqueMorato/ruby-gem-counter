@@ -1,24 +1,35 @@
-# README
+# Ruby Gem Counter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Ruby Gem Counter** was born to list all Github's repositories that use Ruby, find the `Gemfile` parse it and count which `gems` are used to rank which one is the most used.
 
-Things you may want to cover:
 
-* Ruby version
+## Running with Docker
 
-* System dependencies
+We are using a simple Docker environment with two images, the application it self and a `Postgres` database.
 
-* Configuration
+To run the application just use:
 
-* Database creation
+```bash
+docker-compose up
+```
 
-* Database initialization
+That will start the rails application
 
-* How to run the test suite
+## Contributors
 
-* Services (job queues, cache servers, search engines, etc.)
+* @HenriqueMorato
+* @Cendrao
 
-* Deployment instructions
 
-* ...
+*Want to be here too? Read how below!*
+
+## Contributing
+
+Easy steps:
+
+* Fork the repository;
+* Create a feature branch;
+* Make sure to test your feature and that all test are passing;
+* Commit;
+* Submit the Pull Request;
+
