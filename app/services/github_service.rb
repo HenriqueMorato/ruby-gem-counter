@@ -13,20 +13,33 @@ module GithubService
       "#{endpoint}/search/repositories"
     end
 
+    def gemfile_uri(repository_url)
+      "#{repository_url}/contents/Gemfile"
+    end
+
     def repositories_client
       base_client(uri: repositories_uri)
     end
 
-    def base_client(uri:)
-      @base_client ||= new_connection(uri)
+    def gemfile_client(repository_url)
+      base_client(uri: gemfile_uri(repository_url),
+                  headers: { 'Accept': 'application/vnd.github.VERSION.raw' })
+    end
+
+    def base_client(uri:, headers: nil)
+      new_connection(uri: uri, headers: headers)
     end
 
     private
 
-    def new_connection(uri)
+    def new_connection(uri:, headers: nil)
       Faraday.new(url: uri) do |faraday|
         faraday.use :instrumentation
         faraday.headers['Authorization'] = "token #{ENV['GITHUB_TOKEN']}"
+
+        headers&.each do |key, value|
+          faraday.headers[key] = value
+        end
 
         faraday.response :json, parser_options: { symbolize_names: true },
                                 content_type: /\bjson$/
