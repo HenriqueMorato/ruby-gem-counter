@@ -1,8 +1,9 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=a9766133541de49ffe2d169861e1cb2ea7c532219851d91a175566239e35d824
 language: ruby
-script:
-  - bundle exec rspec --format documentation
-  - bundle exec rubocop --config .rubocop.yml
-  - bundle-audit check --update
+rvm:
+  - 2.4.4
 service:
   - postgresql
 postgres:
@@ -10,9 +11,17 @@ postgres:
   database: postgresql
   username: postgres
 before_script:
+  - gem update --system
   - cp config/database.yml.travis config/database.yml
-  - "psql -c 'create database gemcounter_test;' -U postgres"
-  - "bundle exec rake db:migrate"
-  - "gem install bundler-audit"
-rvm:
-  - 2.4.1
+  - psql -c 'create database gemcounter_test;' -U postgres
+  - RAILS_ENV=test bundle exec rake db:migrate
+  - gem install bundler-audit
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+script:
+  - bundle exec rspec --format documentation
+  - bundle exec rubocop --config .rubocop.yml
+  - bundle-audit check --update
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT

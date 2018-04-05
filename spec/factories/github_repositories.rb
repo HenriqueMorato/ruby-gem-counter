@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :github_repository do
-    name 'MyString'
-    url 'MyString'
+    full_name 'thoughtbot/factory_bot_rails'
+    url 'https://api.github.com/repos/thoughtbot/factory_bot_rails'
   end
 end

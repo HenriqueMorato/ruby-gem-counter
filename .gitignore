@@ -27,3 +27,4 @@ coverage/
 .env.docker
 
 /spec/examples.txt
+sneakers.log

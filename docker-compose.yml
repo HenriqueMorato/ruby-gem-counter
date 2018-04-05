@@ -7,7 +7,7 @@ services:
     env_file:
       .env.docker
     volumes:
-      - .:/gemcounterdb
+      - gemcounterdb:/var/lib/postgresql/data
   web:
     build: .
     volumes:
@@ -19,3 +19,16 @@ services:
       .env.docker
     links:
       - db
+      - rabbit
+  rabbit:
+    image: rabbitmq:3.7.4-management
+    hostname: 'rabbit'
+    env_file:
+      .env.docker
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - .:/gemcounterbunny
+volumes:
+  gemcounterdb:

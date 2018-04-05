@@ -1,0 +1,146 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/search/repositories?page=1&per_page=30&q=created:2008-01-12%20language:ruby
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - token ff51ff0af02b71089c8d09356206ef2c29fbb464
+      User-Agent:
+      - Faraday v0.14.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Mon, 23 Apr 2018 22:04:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '30'
+      X-Ratelimit-Remaining:
+      - '28'
+      X-Ratelimit-Reset:
+      - '1524521143'
+      Cache-Control:
+      - no-cache
+      X-Oauth-Scopes:
+      - ''
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Runtime-Rack:
+      - '0.111776'
+      X-Github-Request-Id:
+      - D82A:382A:15B84F:2F4395:5ADE587C
+    body:
+      encoding: ASCII-8BIT
+      string: '{"total_count":1,"incomplete_results":false,"items":[{"id":26,"name":"merb-core","full_name":"wycats/merb-core","owner":{"login":"wycats","id":4,"avatar_url":"https://avatars0.githubusercontent.com/u/4?v=4","gravatar_id":"","url":"https://api.github.com/users/wycats","html_url":"https://github.com/wycats","followers_url":"https://api.github.com/users/wycats/followers","following_url":"https://api.github.com/users/wycats/following{/other_user}","gists_url":"https://api.github.com/users/wycats/gists{/gist_id}","starred_url":"https://api.github.com/users/wycats/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/wycats/subscriptions","organizations_url":"https://api.github.com/users/wycats/orgs","repos_url":"https://api.github.com/users/wycats/repos","events_url":"https://api.github.com/users/wycats/events{/privacy}","received_events_url":"https://api.github.com/users/wycats/received_events","type":"User","site_admin":false},"private":false,"html_url":"https://github.com/wycats/merb-core","description":"Merb
+        Core: All you need. None you don''t.","fork":false,"url":"https://api.github.com/repos/wycats/merb-core","forks_url":"https://api.github.com/repos/wycats/merb-core/forks","keys_url":"https://api.github.com/repos/wycats/merb-core/keys{/key_id}","collaborators_url":"https://api.github.com/repos/wycats/merb-core/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/wycats/merb-core/teams","hooks_url":"https://api.github.com/repos/wycats/merb-core/hooks","issue_events_url":"https://api.github.com/repos/wycats/merb-core/issues/events{/number}","events_url":"https://api.github.com/repos/wycats/merb-core/events","assignees_url":"https://api.github.com/repos/wycats/merb-core/assignees{/user}","branches_url":"https://api.github.com/repos/wycats/merb-core/branches{/branch}","tags_url":"https://api.github.com/repos/wycats/merb-core/tags","blobs_url":"https://api.github.com/repos/wycats/merb-core/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/wycats/merb-core/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/wycats/merb-core/git/refs{/sha}","trees_url":"https://api.github.com/repos/wycats/merb-core/git/trees{/sha}","statuses_url":"https://api.github.com/repos/wycats/merb-core/statuses/{sha}","languages_url":"https://api.github.com/repos/wycats/merb-core/languages","stargazers_url":"https://api.github.com/repos/wycats/merb-core/stargazers","contributors_url":"https://api.github.com/repos/wycats/merb-core/contributors","subscribers_url":"https://api.github.com/repos/wycats/merb-core/subscribers","subscription_url":"https://api.github.com/repos/wycats/merb-core/subscription","commits_url":"https://api.github.com/repos/wycats/merb-core/commits{/sha}","git_commits_url":"https://api.github.com/repos/wycats/merb-core/git/commits{/sha}","comments_url":"https://api.github.com/repos/wycats/merb-core/comments{/number}","issue_comment_url":"https://api.github.com/repos/wycats/merb-core/issues/comments{/number}","contents_url":"https://api.github.com/repos/wycats/merb-core/contents/{+path}","compare_url":"https://api.github.com/repos/wycats/merb-core/compare/{base}...{head}","merges_url":"https://api.github.com/repos/wycats/merb-core/merges","archive_url":"https://api.github.com/repos/wycats/merb-core/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/wycats/merb-core/downloads","issues_url":"https://api.github.com/repos/wycats/merb-core/issues{/number}","pulls_url":"https://api.github.com/repos/wycats/merb-core/pulls{/number}","milestones_url":"https://api.github.com/repos/wycats/merb-core/milestones{/number}","notifications_url":"https://api.github.com/repos/wycats/merb-core/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/wycats/merb-core/labels{/name}","releases_url":"https://api.github.com/repos/wycats/merb-core/releases{/id}","deployments_url":"https://api.github.com/repos/wycats/merb-core/deployments","created_at":"2008-01-12T05:50:53Z","updated_at":"2018-03-24T16:17:58Z","pushed_at":"2008-10-13T02:31:34Z","git_url":"git://github.com/wycats/merb-core.git","ssh_url":"git@github.com:wycats/merb-core.git","clone_url":"https://github.com/wycats/merb-core.git","svn_url":"https://github.com/wycats/merb-core","homepage":"http://www.merbivore.com","size":3462,"stargazers_count":405,"watchers_count":405,"language":"Ruby","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":54,"mirror_url":null,"archived":false,"open_issues_count":0,"license":null,"forks":54,"open_issues":0,"watchers":405,"default_branch":"master","permissions":{"admin":false,"push":false,"pull":true},"score":1.0}]}'
+    http_version: 
+  recorded_at: Mon, 23 Apr 2018 22:04:45 GMT
+- request:
+    method: get
+    uri: https://api.github.com/search/repositories?page=1&per_page=30&q=created:2008-01-13%20language:ruby
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - token ff51ff0af02b71089c8d09356206ef2c29fbb464
+      User-Agent:
+      - Faraday v0.14.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Mon, 23 Apr 2018 22:04:46 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '30'
+      X-Ratelimit-Remaining:
+      - '27'
+      X-Ratelimit-Reset:
+      - '1524521143'
+      Cache-Control:
+      - no-cache
+      X-Oauth-Scopes:
+      - ''
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Runtime-Rack:
+      - '0.176085'
+      X-Github-Request-Id:
+      - 811A:382A:15B8EE:2F4509:5ADE587D
+    body:
+      encoding: ASCII-8BIT
+      string: '{"total_count":1,"incomplete_results":false,"items":[{"id":28,"name":"god","full_name":"mojombo/god","owner":{"login":"mojombo","id":1,"avatar_url":"https://avatars0.githubusercontent.com/u/1?v=4","gravatar_id":"","url":"https://api.github.com/users/mojombo","html_url":"https://github.com/mojombo","followers_url":"https://api.github.com/users/mojombo/followers","following_url":"https://api.github.com/users/mojombo/following{/other_user}","gists_url":"https://api.github.com/users/mojombo/gists{/gist_id}","starred_url":"https://api.github.com/users/mojombo/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/mojombo/subscriptions","organizations_url":"https://api.github.com/users/mojombo/orgs","repos_url":"https://api.github.com/users/mojombo/repos","events_url":"https://api.github.com/users/mojombo/events{/privacy}","received_events_url":"https://api.github.com/users/mojombo/received_events","type":"User","site_admin":false},"private":false,"html_url":"https://github.com/mojombo/god","description":"Ruby
+        process monitor","fork":false,"url":"https://api.github.com/repos/mojombo/god","forks_url":"https://api.github.com/repos/mojombo/god/forks","keys_url":"https://api.github.com/repos/mojombo/god/keys{/key_id}","collaborators_url":"https://api.github.com/repos/mojombo/god/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/mojombo/god/teams","hooks_url":"https://api.github.com/repos/mojombo/god/hooks","issue_events_url":"https://api.github.com/repos/mojombo/god/issues/events{/number}","events_url":"https://api.github.com/repos/mojombo/god/events","assignees_url":"https://api.github.com/repos/mojombo/god/assignees{/user}","branches_url":"https://api.github.com/repos/mojombo/god/branches{/branch}","tags_url":"https://api.github.com/repos/mojombo/god/tags","blobs_url":"https://api.github.com/repos/mojombo/god/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/mojombo/god/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/mojombo/god/git/refs{/sha}","trees_url":"https://api.github.com/repos/mojombo/god/git/trees{/sha}","statuses_url":"https://api.github.com/repos/mojombo/god/statuses/{sha}","languages_url":"https://api.github.com/repos/mojombo/god/languages","stargazers_url":"https://api.github.com/repos/mojombo/god/stargazers","contributors_url":"https://api.github.com/repos/mojombo/god/contributors","subscribers_url":"https://api.github.com/repos/mojombo/god/subscribers","subscription_url":"https://api.github.com/repos/mojombo/god/subscription","commits_url":"https://api.github.com/repos/mojombo/god/commits{/sha}","git_commits_url":"https://api.github.com/repos/mojombo/god/git/commits{/sha}","comments_url":"https://api.github.com/repos/mojombo/god/comments{/number}","issue_comment_url":"https://api.github.com/repos/mojombo/god/issues/comments{/number}","contents_url":"https://api.github.com/repos/mojombo/god/contents/{+path}","compare_url":"https://api.github.com/repos/mojombo/god/compare/{base}...{head}","merges_url":"https://api.github.com/repos/mojombo/god/merges","archive_url":"https://api.github.com/repos/mojombo/god/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/mojombo/god/downloads","issues_url":"https://api.github.com/repos/mojombo/god/issues{/number}","pulls_url":"https://api.github.com/repos/mojombo/god/pulls{/number}","milestones_url":"https://api.github.com/repos/mojombo/god/milestones{/number}","notifications_url":"https://api.github.com/repos/mojombo/god/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/mojombo/god/labels{/name}","releases_url":"https://api.github.com/repos/mojombo/god/releases{/id}","deployments_url":"https://api.github.com/repos/mojombo/god/deployments","created_at":"2008-01-13T05:16:23Z","updated_at":"2018-04-23T07:13:35Z","pushed_at":"2017-11-10T22:42:25Z","git_url":"git://github.com/mojombo/god.git","ssh_url":"git@github.com:mojombo/god.git","clone_url":"https://github.com/mojombo/god.git","svn_url":"https://github.com/mojombo/god","homepage":"http://godrb.com","size":2639,"stargazers_count":2093,"watchers_count":2093,"language":"Ruby","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":true,"forks_count":489,"mirror_url":null,"archived":false,"open_issues_count":118,"license":{"key":"mit","name":"MIT
+        License","spdx_id":"MIT","url":"https://api.github.com/licenses/mit"},"forks":489,"open_issues":118,"watchers":2093,"default_branch":"master","permissions":{"admin":false,"push":false,"pull":true},"score":1.0}]}'
+    http_version: 
+  recorded_at: Mon, 23 Apr 2018 22:04:46 GMT
+recorded_with: VCR 4.0.0
