@@ -1,4 +1,5 @@
 require 'simplecov'
+require 'simplecov-console'
 
 SimpleCov.configure do
   add_group 'Services', 'app/services'
@@ -7,6 +8,8 @@ SimpleCov.configure do
   add_filter 'application_job.rb'
   add_filter 'application_mailer.rb'
 end
+
+SimpleCov.formatter = SimpleCov::Formatter::Console
 
 SimpleCov.start 'rails'
 

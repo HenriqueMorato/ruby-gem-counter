@@ -1,0 +1,2 @@
+development:
+  amqp: 'amqp://<%= ENV['RABBITMQ_DEFAULT_USER'] %>:<%= ENV['RABBITMQ_DEFAULT_PASS'] %>@rabbit:5672'

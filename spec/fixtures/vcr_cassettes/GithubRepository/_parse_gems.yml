@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/repos/thoughtbot/factory_bot_rails/contents/Gemfile
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - token <TOKEN>
+      Accept:
+      - application/vnd.github.VERSION.raw
+      User-Agent:
+      - Faraday v0.14.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Tue, 24 Apr 2018 21:26:31 GMT
+      Content-Type:
+      - application/vnd.github.VERSION.raw; charset=utf-8
+      Content-Length:
+      - '424'
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4996'
+      X-Ratelimit-Reset:
+      - '1524607496'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      Etag:
+      - '"edbe1b8185413b2fbe8843d522df111c9f6b96cd"'
+      Last-Modified:
+      - Tue, 07 Nov 2017 20:39:12 GMT
+      X-Oauth-Scopes:
+      - ''
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; param=VERSION.raw
+      Access-Control-Expose-Headers:
+      - ETag, Link, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Runtime-Rack:
+      - '0.061046'
+      X-Github-Request-Id:
+      - A99A:382A:1108C39:254BAA1:5ADFA107
+    body:
+      encoding: UTF-8
+      string: |
+        source 'https://rubygems.org'
+
+        gemspec name: 'factory_bot_rails'
+
+        gem 'appraisal'
+        gem 'aruba'
+        gem 'coffee-rails'
+        gem 'cucumber', '1.3.19'
+        gem 'jquery-rails'
+        gem 'rake'
+        gem 'rspec-rails'
+        gem 'uglifier'
+        gem 'test-unit'
+
+        gem 'activerecord-jdbcsqlite3-adapter', platforms: :jruby
+        gem 'jdbc-sqlite3', platforms: :jruby
+        gem 'therubyrhino', platforms: :jruby
+        gem 'jruby-openssl', platforms: :jruby
+
+        gem 'sqlite3', platforms: :ruby
+    http_version: 
+  recorded_at: Tue, 24 Apr 2018 21:26:31 GMT
+recorded_with: VCR 4.0.0

@@ -35,7 +35,7 @@ module GithubService
     def new_connection(uri:, headers: nil)
       Faraday.new(url: uri) do |faraday|
         faraday.use :instrumentation
-        faraday.headers['Authorization'] = "token #{ENV['GITHUB_TOKEN']}"
+        faraday.headers['Authorization'] = "token #{github_token}"
 
         headers&.each do |key, value|
           faraday.headers[key] = value
@@ -45,6 +45,10 @@ module GithubService
                                 content_type: /\bjson$/
         faraday.adapter :net_http
       end
+    end
+
+    def github_token
+      Rails.configuration.gemcounter['github_token']
     end
   end
 end

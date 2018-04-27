@@ -1,11 +1,15 @@
-FROM campuscode/ruby-gitlab-ci:2.4
-MAINTAINER Campus Code <dev@campuscode.com.br>
+FROM ruby:2.4.4
+MAINTAINER Henrique & Matheus<contato@henriquemorato.com.br>
+
+ENV NODE_VERSION 7
+RUN curl -sL https://deb.nodesource.com/setup_$NODE_VERSION.x | bash -
 
 RUN apt-get update -qq
-RUN apt-get install -y --no-install-recommends \
+RUN apt-get install -y --no-install-recommends nodejs \
       vim \
       postgresql-client \
-      tzdata
+      tzdata \
+      locales
 
 RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
 RUN locale-gen

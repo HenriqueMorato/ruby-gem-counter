@@ -28,6 +28,8 @@ module Gemcounter
     # -- all .rb files in that directory are automatically loaded.
 
     # Don't generate system test files.
+    config.gemcounter = config_for(:gemcounter)
     config.generators.system_tests = nil
+    config.rabbitmq = config_for(:rabbitmq)
   end
 end
