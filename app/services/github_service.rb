@@ -23,21 +23,21 @@ module GithubService
 
     def gemfile_client(repository_url)
       base_client(uri: gemfile_uri(repository_url),
-                  headers: { 'Accept': 'application/vnd.github.VERSION.raw' })
+                  header: { 'Accept': 'application/vnd.github.VERSION.raw' })
     end
 
-    def base_client(uri:, headers: nil)
-      new_connection(uri: uri, headers: headers)
+    def base_client(uri:, header: nil)
+      new_connection(uri: uri, header: header)
     end
 
     private
 
-    def new_connection(uri:, headers: nil)
+    def new_connection(uri:, header: nil)
       Faraday.new(url: uri) do |faraday|
         faraday.use :instrumentation
         faraday.headers['Authorization'] = "token #{github_token}"
 
-        headers&.each do |key, value|
+        header&.each do |key, value|
           faraday.headers[key] = value
         end
 

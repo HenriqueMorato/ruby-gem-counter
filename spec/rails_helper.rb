@@ -35,7 +35,8 @@ RSpec.configure do |config|
   end
 
   config.before(:each) do |test|
-    RabbitQueue::Configurator.connection = BunnyMock.new.start
+    RabbitQueue::Configurator.reader_connection = BunnyMock.new.start
+    RabbitQueue::Configurator.writer_connection = BunnyMock.new.start
     Sneakers::Testing.clear_all
     WebMock.disable_net_connect!(allow_localhost: true,
                                  allow: 'api.travis-ci.org')

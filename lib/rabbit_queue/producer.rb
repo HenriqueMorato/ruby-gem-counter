@@ -1,6 +1,6 @@
 module RabbitQueue
   class Producer
-    attr_reader :data, :queue
+    attr_reader :data, :queue, :configurator
 
     def self.enqueue(data, queue)
       new(data, queue).enqueue
@@ -16,8 +16,8 @@ module RabbitQueue
     end
 
     def exchange
-      @channel ||= Configurator.channel
-      Configurator.queue(queue)
+      @channel ||= Configurator.writer_channel
+      Configurator.writer_queue(queue)
       @channel.default_exchange
     end
   end

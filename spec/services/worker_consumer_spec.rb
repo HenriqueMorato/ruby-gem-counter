@@ -13,7 +13,7 @@ RSpec.describe RabbitQueue::WorkerConsumer do
 
   it '.ack' do
     worker = described_class.new('test')
-    expect(RabbitQueue::Configurator.channel).to receive(:acknowledge)
+    expect(RabbitQueue::Configurator.reader_channel).to receive(:acknowledge)
       .with('test', false)
     worker.ack('test')
   end

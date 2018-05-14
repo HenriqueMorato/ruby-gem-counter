@@ -1,2 +1,6 @@
 development:
-  amqp: 'amqp://<%= ENV['RABBITMQ_DEFAULT_USER'] %>:<%= ENV['RABBITMQ_DEFAULT_PASS'] %>@rabbit:5672'
+  consumer: 'amqp://<%= ENV['RABBITMQ_DEFAULT_USER'] %>:<%= ENV['RABBITMQ_DEFAULT_PASS'] %>@rabbit:5672'
+  producer: 'amqp://<%= ENV['RABBITMQ_DEFAULT_USER'] %>:<%= ENV['RABBITMQ_DEFAULT_PASS'] %>@rabbit:5672'
+production:
+  consumer: <%= ENV['RABBITMQ_BIGWIG_TX_URL'] %>
+  producer: <%= ENV['RABBITMQ_BIGWIG_RX_URL'] %>
